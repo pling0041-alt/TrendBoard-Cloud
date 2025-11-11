@@ -1,0 +1,13 @@
+appId: com.trendboard.cloud
+productName: TrendBoard
+directories:
+  output: dist
+files:
+  - "**/*"
+win:
+  target:
+    - nsis
+publish:
+  provider: github
+  owner: pling0041-alt
+  repo: TrendBoard-Cloud
