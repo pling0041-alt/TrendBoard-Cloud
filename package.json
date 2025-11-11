@@ -1,0 +1,39 @@
+{
+  "name": "trendboard-cloud",
+  "version": "0.1.0",
+  "description": "TrendBoard Cloud - 개인용 유튜브 트렌드 앱",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.trendboard.cloud",
+    "productName": "TrendBoard",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "pling0041-alt",
+        "repo": "TrendBoard-Cloud"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "electron-updater": "^5.4.3"
+  },
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^24.7.0"
+  }
+}
